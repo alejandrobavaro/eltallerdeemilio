@@ -1,0 +1,163 @@
+.contacto-section {
+  padding: 4rem 2rem;
+  background-color: #f5f0e6;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.contacto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contacto-info {
+  flex: 1;
+  min-width: 300px;
+
+  h2 {
+    color: #5a3921;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    color: #8b6a4b;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+}
+
+.gothic-initial {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 1.3em;
+  margin-right: 2px;
+  color: #5a3921;
+}
+
+.contacto-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .contacto-icon {
+    font-size: 1.5rem;
+    color: #8b6a4b;
+    margin-top: 0.3rem;
+  }
+
+  h4 {
+    color: #5a3921;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    color: #5a4532;
+  }
+}
+
+.contacto-form {
+  flex: 1;
+  min-width: 300px;
+  background: #e8d8c0;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid #d2b48c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    color: #5a3921;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #c9b6a6;
+    border-radius: 2px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    background: #f5f0e6;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #8b6a4b;
+      box-shadow: 0 0 0 2px rgba(139, 106, 75, 0.2);
+    }
+
+    &::placeholder {
+      color: #a67c52;
+      opacity: 0.7;
+    }
+  }
+}
+
+.btn-primary {
+  background: #8b6a4b;
+  color: #f5f0e6;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  &:hover {
+    background: #5a3921;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(90, 57, 33, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .contacto-section {
+    padding: 2rem 1rem;
+  }
+
+  .contacto-container {
+    gap: 2rem;
+  }
+
+  .contacto-info {
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .contacto-form {
+    padding: 1.5rem;
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}

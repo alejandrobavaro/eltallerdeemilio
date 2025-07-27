@@ -1,0 +1,342 @@
+.taller-page {
+    font-family: 'Cormorant Garamond', serif;
+    color: #5a3921;
+    background-color: #f9f5f0;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  }
+  
+  .hero-taller {
+    position: relative;
+    height: 60vh;
+    background: url('/img/taller-hero.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26, 22, 18, 0.7);
+    }
+  }
+  
+  .hero-overlay {
+    position: relative;
+    z-index: 1;
+    color: #968b76;
+    max-width: 800px;
+    padding: 0 1rem;
+    
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      
+      .gothic-initial {
+        font-size: 4.5rem;
+        color: #d2b48c;
+        font-family: 'UnifrakturMaguntia', cursive;
+      }
+    }
+    
+    p {
+      font-size: 1.5rem;
+      color: #aa987f;
+      font-style: italic;
+    }
+  }
+  
+  .taller-features {
+    margin: 5rem 0;
+    padding: 2rem 0;
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+  
+  .feature-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e8d8c0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      color: #8b6a4b;
+      margin-bottom: 1.5rem;
+    }
+    
+    h3 {
+      color: #5a3921;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    p {
+      color: #5a4532;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+  }
+  
+  .taller-historia {
+    margin: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    @media (min-width: 992px) {
+      flex-direction: row;
+      align-items: center;
+      
+      .historia-content {
+        flex: 1;
+      }
+      
+      .historia-image {
+        flex: 1;
+      }
+    }
+    
+    .historia-content {
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+        
+        .gothic-initial {
+          font-size: 3rem;
+          color: #8b6a4b;
+          font-family: 'UnifrakturMaguntia', cursive;
+        }
+      }
+      
+      p {
+        color: #5a4532;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+    }
+    
+    .historia-image {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+  
+  .taller-equipo {
+    margin: 6rem 0;
+    
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      
+      .gothic-initial {
+        font-size: 3rem;
+        color: #8b6a4b;
+        font-family: 'UnifrakturMaguntia', cursive;
+      }
+    }
+    
+    .equipo-subtitle {
+      text-align: center;
+      color: #8b6a4b;
+      margin-bottom: 3rem;
+      font-size: 1.3rem;
+      font-style: italic;
+    }
+    
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3rem;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  
+  .persona-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    .persona-image {
+      height: 350px;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+    }
+    
+    &:hover .persona-image img {
+      transform: scale(1.05);
+    }
+    
+    .persona-info {
+      padding: 2rem;
+      
+      h3 {
+        color: #5a3921;
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+      
+      .persona-rol {
+        color: #8b6a4b;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+      
+      .persona-bio {
+        color: #5a4532;
+        line-height: 1.7;
+        font-size: 1.05rem;
+      }
+    }
+  }
+  
+  .taller-galeria {
+    margin: 6rem 0;
+    
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      
+      .gothic-initial {
+        font-size: 3rem;
+        color: #8b6a4b;
+        font-family: 'UnifrakturMaguntia', cursive;
+      }
+    }
+    
+    .galeria-subtitle {
+      text-align: center;
+      color: #8b6a4b;
+      margin-bottom: 3rem;
+      font-size: 1.3rem;
+      font-style: italic;
+    }
+    
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+      
+      @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  
+  .galeria-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      
+      img {
+        transform: scale(1.05);
+      }
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+  
+  // Estilos para las iniciales góticas
+  .gothic-initial {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.2em;
+  }
+  
+  // Animaciones adicionales
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  // Asegúrate de importar la fuente gótica en tu proyecto
+  // @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');

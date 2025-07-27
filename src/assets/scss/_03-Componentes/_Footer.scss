@@ -1,0 +1,127 @@
+.footer {
+  background-color: #2a2323;
+  color: #e2d5c3;
+  padding: 2rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  position: relative;
+}
+
+.footer-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b6a4b, transparent);
+  margin: 0 auto 2rem;
+  width: 80%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &-image {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.footer-tagline {
+  color: #c9b6a6;
+  font-size: 1.1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.footer-section-title {
+  color: #d2b48c;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background-color: #8b6a4b;
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
+}
+
+.footer-contact-link {
+  color: #e2d5c3;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: #f5e7d5;
+    transform: translateX(5px);
+  }
+}
+
+.footer-contact-icon {
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+  color: #8b6a4b;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: #c9b6a6;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: #f5e7d5;
+    transform: translateY(-3px) scale(1.1);
+  }
+}
+
+.gothic-initial {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 1.3em;
+  margin-right: 3px;
+  color: #d2b48c;
+}

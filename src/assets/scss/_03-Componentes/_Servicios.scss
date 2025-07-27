@@ -1,0 +1,185 @@
+.servicios-page {
+    font-family: 'Cormorant Garamond', serif;
+    color: #5a3921;
+  }
+  
+  .hero-servicios {
+    position: relative;
+    height: 50vh;
+    background: url('/img/servicios-hero.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26, 22, 18, 0.7);
+    }
+  }
+  
+  .hero-overlay {
+    position: relative;
+    z-index: 1;
+    color: #f5f0e6;
+    max-width: 800px;
+    padding: 0 1rem;
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      
+      .gothic-initial {
+        color: #d2b48c;
+      }
+    }
+    
+    p {
+      font-size: 1.3rem;
+      color: #e2d5c3;
+    }
+  }
+  
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  
+  .servicio-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-top: 3px solid #8b6a4b;
+    
+    .servicio-icon {
+      font-size: 2.5rem;
+      color: #8b6a4b;
+      margin-bottom: 1rem;
+    }
+    
+    h3 {
+      color: #5a3921;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    .servicio-desc {
+      color: #5a4532;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+  }
+  
+  .servicio-features {
+    h4 {
+      color: #8b6a4b;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+    
+    ul {
+      list-style: none;
+      
+      li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        
+        .feature-icon {
+          color: #8b6a4b;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  
+  .proceso-section {
+    margin: 4rem 0;
+    text-align: center;
+    
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+      
+      .gothic-initial {
+        color: #8b6a4b;
+      }
+    }
+  }
+  
+  .proceso-steps {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .proceso-step {
+    background: #f5f0e6;
+    padding: 1.5rem;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid #e8d8c0;
+    
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      background: #5a3921;
+      color: #f5f0e6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    h3 {
+      color: #5a3921;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+    
+    p {
+      color: #5a4532;
+      line-height: 1.6;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .servicios-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .proceso-steps {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .servicios-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero-servicios {
+      height: 60vh;
+      
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }

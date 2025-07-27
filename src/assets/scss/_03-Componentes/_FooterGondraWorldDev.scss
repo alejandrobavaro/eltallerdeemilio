@@ -1,0 +1,130 @@
+/* Estilos base - Mobile First */
+.craftsman-footer {
+  width: 100%;
+  background-color: #2a1f12; /* Fondo madera más oscuro */
+  color: #d2b48c; /* Color madera medio */
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.tools-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  
+  .hammer-icon {
+    color: #8B5A2B;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    
+    &.flipped {
+      transform: rotate(45deg);
+    }
+  }
+  
+  .nail-line {
+    height: 2px;
+    width: 100px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      #8B5A2B, 
+      transparent);
+  }
+}
+
+.craftsman-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.craftsman-branding {
+  font-size: 0.9rem;
+  
+  .handcrafted {
+    opacity: 0.8;
+  }
+  
+  .craftsman-link {
+    color: #d2b48c;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
+.craftsman-social {
+  display: flex;
+  gap: 1.5rem;
+  
+  .social-tool {
+    color: #8B5A2B;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: #d2b48c;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+/* Tablet (768px) */
+@media (min-width: 768px) {
+  .tools-divider {
+    .hammer-icon {
+      font-size: 1.8rem;
+    }
+    
+    .nail-line {
+      width: 150px;
+    }
+  }
+  
+  .craftsman-content {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .craftsman-branding {
+    font-size: 1rem;
+  }
+  
+  .craftsman-social {
+    gap: 2rem;
+    
+    .social-tool {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Desktop (1024px) */
+@media (min-width: 1024px) {
+  .craftsman-footer {
+    padding: 2rem 1rem;
+  }
+  
+  .tools-divider {
+    margin-bottom: 2rem;
+    
+    .hammer-icon {
+      font-size: 2rem;
+    }
+    
+    .nail-line {
+      width: 200px;
+    }
+  }
+}
